@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin & Dashboard Template">
+    <meta name="author" content="Your Name or Company">
+    <meta name="keywords" content="admin, dashboard, bootstrap, responsive, ui kit, web">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="{{ asset('img/icons/icon-48x48.png') }}" />
+    
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    
+    <link href="{{ asset('static/css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    {% block stylesheets %}{% endblock %}
+  </head>
+  
+  <body>
+    {% block body %}
+    <!-- Content will be placed here -->
+    {% endblock %}
+    
+    {% block javascripts %}
+    <!-- Add your JavaScript files here -->
+    {% endblock %}
+  </body>
+</html>

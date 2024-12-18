@@ -1,0 +1,109 @@
+{% include 'base.html.twig' %}
+{% include 'header.html.twig' %}
+
+{% block stylesheets %}
+<style>
+    body {
+        background-color: #f8f9fa; /* Light gray background for better readability */
+    }
+    .equipment-img {
+        width: 100%; /* Ensure the image takes up the full width of the parent container */
+        height: 200px; /* Set a consistent height */
+        object-fit: cover; /* Ensures the image scales and crops to fit without distortion */
+    }
+    .card {
+        border: none; /* Remove card border for a cleaner look */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to cards */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05); /* Slight zoom effect on hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    }
+    .header {
+        background-color: #343a40; /* Dark background for header */
+        color: #fff; /* White text for contrast */
+        padding: 20px 0; /* Add spacing */
+        text-align: center; /* Center the header text */
+    }
+    .header h1 {
+        margin: 0; /* Remove default margin */
+        font-size: 2.5rem; /* Increase font size */
+    }
+</style>
+{% endblock %}
+
+{# {% block title %}Gym Equipment{% endblock %} #}
+
+{% block content %}
+
+<div class="header">
+    <h1>Gym Fitness Equipment</h1>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Static Data for Gym Equipment -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('theme/images/equipment.jpg') }}" class="card-img-top equipment-img" alt="Treadmill">
+                <div class="card-body">
+                    <h5 class="card-title">Treadmill</h5>
+                    <p class="card-text">A high-quality treadmill for cardio workouts and endurance training.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('theme/images/equipment1.jpeg') }}" class="card-img-top equipment-img" alt="Dumbbells">
+                <div class="card-body">
+                    <h5 class="card-title">Dumbbells</h5>
+                    <p class="card-text">A set of adjustable dumbbells for strength training and muscle building.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('theme/images/equipment2.jpeg') }}" class="card-img-top equipment-img" alt="Bench Press">
+                <div class="card-body">
+                    <h5 class="card-title">Bench Press</h5>
+                    <p class="card-text">A sturdy bench press for chest and upper body workouts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('theme/images/equipment4.jpeg') }}" class="card-img-top equipment-img" alt="Rowing Machine">
+                <div class="card-body">
+                    <h5 class="card-title">Rowing Machine</h5>
+                    <p class="card-text">An advanced rowing machine for full-body cardio and strength training.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('theme/images/equipment5.jpg') }}" class="card-img-top equipment-img" alt="Stationary Bike">
+                <div class="card-body">
+                    <h5 class="card-title">Stationary Bike</h5>
+                    <p class="card-text">A smooth-riding stationary bike for indoor cycling workouts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('theme/images/equipment6.jpeg') }}" class="card-img-top equipment-img" alt="Kettlebells">
+                <div class="card-body">
+                    <h5 class="card-title">Kettlebells</h5>
+                    <p class="card-text">Various sizes of kettlebells for dynamic and functional exercises.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html.twig' %}
+{% endblock %}

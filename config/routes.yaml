@@ -1,0 +1,79 @@
+home:
+    path: /home
+    controller: App\Controller\UserBundle\PageController::home
+
+about:
+    path: /about
+    controller: App\Controller\UserBundle\PageController::about
+
+contact:
+    path: /contact
+    controller: App\Controller\UserBundle\PageController::contact
+    
+course:
+    path: /course
+    controller: App\Controller\UserBundle\PageController::course
+
+course-single:
+    path: /course-single
+    controller: App\Controller\UserBundle\PageController::course-single
+
+services:
+    path: /services
+    controller: App\Controller\UserBundle\PageController::services
+
+blog:
+    path: /blog
+    controller: App\Controller\UserBundle\PageController::blog
+
+blog-single:
+    path: /blog-single
+    controller: App\Controller\UserBundle\PageController::blog-single
+
+blog-sidebar:
+    path: /blog-sidebar
+    controller: App\Controller\UserBundle\PageController::blog-sidebar
+
+trainer:
+    path: /trainer
+    controller: App\Controller\UserBundle\PageController::trainer
+
+pricing:
+    path: /pricing
+    controller: App\Controller\UserBundle\PageController::pricing
+
+admin_user_new:
+    path: /admin/new
+    controller: App\Controller\AdminController::new
+
+admin_user_show:
+    path:  /admin/{id}
+    controller: App\Controller\AdminController::show
+
+admin_user_edit:
+    path: /admin/{id}/edit
+    controller: App\Controller\AdminController::edit
+
+admin_user_delete:
+    path: admin/{id}/delete
+    controller: App\Controller\AdminController::delete
+
+dashboard:
+    path: /dashboard
+    controller: App\Controller\AdminController::index
+
+profile:
+    path: /profile
+    controller: App\Controller\AdminController::profile
+
+login:
+    path: /login
+    controller: App\Controller\UserBundle\PageController::login
+
+equipment:
+    path: /equipment
+    controller: App\Controller\UserBundle\PageController::equipment
+
+message:
+    path: /message
+    controller: App\Controller\UserBundle\PageController::message

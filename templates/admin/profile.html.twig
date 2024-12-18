@@ -1,0 +1,26 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>User Profile</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Profile Details</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Name:</strong> {{ user.name }}</li>
+                <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+                <li class="list-group-item"><strong>Role:</strong> {{ user.roles|join(', ') }}</li>
+                <li class="list-group-item"><strong>Create Date:</strong> {{ user.createdAt ? user.createdAt|date('Y-m-d H:i:s') : 'NULL' }}</li>
+                <li class="list-group-item"><strong>Update Date:</strong> {{ user.updatedAt ? user.updatedAt|date('Y-m-d H:i:s') : 'NULL' }}</li>
+                <li class="list-group-item"><strong>Last Login:</strong> {{ user.lastLogin ? user.lastLogin|date('Y-m-d H:i:s') : 'Never' }}</li>
+                <li class="list-group-item"><strong>Last Password Change:</strong> {{ user.lastChangePassword ? user.lastChangePassword|date('Y-m-d H:i:s') : 'Never' }}</li>
+            </ul>
+            <a href="{{ path('dashboard') }}" class="btn btn-secondary mt-3">Back to List</a>
+            <a href="{{ path('app_logout') }}" class="btn btn-danger mt-3">Logout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

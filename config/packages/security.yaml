@@ -1,0 +1,39 @@
+security:
+    enable_authenticator_manager: true
+
+    # Password hashing configuration
+    password_hashers:
+        App\Entity\User: 'auto' # Specify your User entity here.
+
+    # User provider configuration
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email # Assuming email is your unique identifier
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            lazy: true
+            provider: app_user_provider
+            logout:
+                path: app_logout
+            custom_authenticator: App\Security\UserAuthenticator
+
+    # Access control rules
+    access_control:
+        - { path: ^/home, roles: ROLE_USER }
+        - { path: ^/dashboard, roles: ROLE_ADMIN }
+
+when@test:
+    security:
+        password_hashers:
+            App\Entity\User:
+                algorithm: auto
+                cost: 4  # Lowest possible value for bcrypt
+                time_cost: 3  # Lowest possible value for argon
+                memory_cost: 10  # Lowest possible value for argon
